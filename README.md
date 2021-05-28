@@ -1,4 +1,4 @@
-## slim-api@0.0.1
+## inv-man-item-api@6.14.11
 
 ### Building
 
@@ -19,7 +19,7 @@ Navigate to the folder of your consuming project and run one of next commands.
 _published:_
 
 ```
-npm install slim-api@0.0.1 --save
+npm install inv-man-item-api@6.14.11 --save
 ```
 
 _without publishing (not recommended):_
@@ -39,7 +39,7 @@ npm link
 
 In your project:
 ```
-npm link slim-api
+npm link inv-man-item-api
 ```
 
 __Note for Windows users:__ The Angular CLI has troubles to use linked npm packages.
@@ -54,7 +54,7 @@ In your Angular project:
 
 ```
 // without configuring providers
-import { ApiModule } from 'slim-api';
+import { ApiModule } from 'inv-man-item-api';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -73,7 +73,7 @@ export class AppModule {}
 
 ```
 // configuring providers
-import { ApiModule, Configuration, ConfigurationParameters } from 'slim-api';
+import { ApiModule, Configuration, ConfigurationParameters } from 'inv-man-item-api';
 
 export function apiConfigFactory (): Configuration {
   const params: ConfigurationParameters = {
@@ -93,7 +93,7 @@ export class AppModule {}
 
 ```
 // configuring providers with an authentication service that manages your access tokens
-import { ApiModule, Configuration } from 'slim-api';
+import { ApiModule, Configuration } from 'inv-man-item-api';
 
 @NgModule({
     imports: [ ApiModule ],
@@ -117,7 +117,7 @@ export class AppModule {}
 ```
 
 ```
-import { DefaultApi } from 'slim-api';
+import { DefaultApi } from 'inv-man-item-api';
 
 export class AppComponent {
     constructor(private apiGateway: DefaultApi) { }
@@ -155,7 +155,7 @@ export class AppModule {
 If different than the generated base path, during app bootstrap, you can provide the base path to your service. 
 
 ```
-import { BASE_PATH } from 'slim-api';
+import { BASE_PATH } from 'inv-man-item-api';
 
 bootstrap(AppComponent, [
     { provide: BASE_PATH, useValue: 'https://your-web-service.com' },
@@ -164,7 +164,7 @@ bootstrap(AppComponent, [
 or
 
 ```
-import { BASE_PATH } from 'slim-api';
+import { BASE_PATH } from 'inv-man-item-api';
 
 @NgModule({
     imports: [],
@@ -188,7 +188,7 @@ export const environment = {
 
 In the src/app/app.module.ts:
 ```
-import { BASE_PATH } from 'slim-api';
+import { BASE_PATH } from 'inv-man-item-api';
 import { environment } from '../environments/environment';
 
 @NgModule({
